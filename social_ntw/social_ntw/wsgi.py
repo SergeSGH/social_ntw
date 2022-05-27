@@ -1,5 +1,5 @@
 """
-WSGI config for zuckerberg_news project.
+WSGI config for social_ntw project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
