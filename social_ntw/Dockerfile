@@ -6,4 +6,4 @@ COPY . .
 
 RUN pip3 install -r /app/requirements.txt --no-cache-dir
 
-CMD ["gunicorn", "zuckerberg_news.wsgi:application", "--bind", "0:8000" ]
+CMD ["gunicorn", "social_ntw.wsgi:application", "--bind", "0:8000" ]

@@ -105,33 +105,6 @@ REST_FRAMEWORK = {
 
 }
 
-#DJOSER = {
-#    'PASSWORD_RESET_CONFIRM_URL': '#/password/reset/confirm/{uid}/{token}',
-#    'USERNAME_RESET_CONFIRM_URL': '#/username/reset/confirm/{uid}/{token}',
-#    'ACTIVATION_URL': '#/activate/{uid}/{token}',
-#    'SEND_ACTIVATION_EMAIL': False,
-#    'SERIALIZERS': {
-#        'activation': 'djoser.serializers.ActivationSerializer',
-#        'password_reset': 'djoser.serializers.SendEmailResetSerializer',
-#        'password_reset_confirm': 'djoser.serializers.PasswordResetConfirmSerializer',
-#        'password_reset_confirm_retype': 'djoser.serializers.PasswordResetConfirmRetypeSerializer',
-#        'set_password': 'djoser.serializers.SetPasswordSerializer',
-#        'set_password_retype': 'djoser.serializers.SetPasswordRetypeSerializer',
-#        'set_username': 'djoser.serializers.SetUsernameSerializer',
-#        'set_username_retype': 'djoser.serializers.SetUsernameRetypeSerializer',
-#        'username_reset': 'djoser.serializers.SendEmailResetSerializer',
-#        'username_reset_confirm': 'djoser.serializers.UsernameResetConfirmSerializer',
-#        'username_reset_confirm_retype': 'djoser.serializers.UsernameResetConfirmRetypeSerializer',
-#        'user_create': 'djoser.serializers.UserCreateSerializer',
-#        'user_create_password_retype': 'djoser.serializers.UserCreatePasswordRetypeSerializer',
-#        'user_delete': 'djoser.serializers.UserDeleteSerializer',
-#        'user': 'api.serializers.UserSerializer',
-#        'current_user': 'djoser.serializers.UserSerializer',
-#        'token': 'djoser.serializers.TokenSerializer',
-#        'token_create': 'djoser.serializers.TokenCreateSerializer',
-#}
-#}
-
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(days=1),
 }

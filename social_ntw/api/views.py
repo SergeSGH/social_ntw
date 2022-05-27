@@ -1,17 +1,18 @@
 from django.contrib.auth import get_user_model
 from django.shortcuts import get_object_or_404
+from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import filters, status, viewsets
 from rest_framework.decorators import action
 from rest_framework.permissions import (IsAuthenticated,
                                         IsAuthenticatedOrReadOnly)
 from rest_framework.response import Response
-from django_filters.rest_framework import DjangoFilterBackend
-from .filters import PostsFilter
 
 from posts.models import IsLiked, Posts
+from .filters import PostsFilter
 from .pagination import PostsPagination
 from .permissions import IsAuthor, ReadOnly
 from .serializers import PostsSerializer
+
 User = get_user_model()
 
 

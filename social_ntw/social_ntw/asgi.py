@@ -1,5 +1,5 @@
 """
-ASGI config for zuckerberg_news project.
+ASGI config for social_ntw project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 

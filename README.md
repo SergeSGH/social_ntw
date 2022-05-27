@@ -17,3 +17,10 @@ cd social_ntw/infra
 ```
 docker-compose up -d --build
 ```
+Проект доступен:
+```
+http://127.0.0.1/admin/ - админ панель
+http://127.0.0.1/api/ - доступ к API интерфейсу
+http://127.0.0.1/swagger/ - документация OpenAPI (swagger)
+http://127.0.0.1/redoc/ - документация OpenAPI (ReDoc)
+```

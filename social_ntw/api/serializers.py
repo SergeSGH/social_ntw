@@ -1,7 +1,7 @@
 from django.contrib.auth import get_user_model
 from rest_framework import serializers
 
-from posts.models import Posts, IsLiked
+from posts.models import IsLiked, Posts
 
 User = get_user_model()
 
