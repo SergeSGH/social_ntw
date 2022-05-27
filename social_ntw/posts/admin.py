@@ -1,9 +1,6 @@
 from django.contrib import admin
-from django.contrib.auth import get_user_model
 
-from .models import IsLiked, Posts
-
-User = get_user_model()
+from .models import IsLiked, Posts, User
 
 
 class UserAdmin(admin.ModelAdmin):
@@ -19,6 +16,8 @@ class UserAdmin(admin.ModelAdmin):
         'last_name',
         'username',
         'email',
+        'location',
+        'company',
         'posts_count'
     )
     ordering = ('id',)
@@ -56,6 +55,21 @@ class PostsAdmin(admin.ModelAdmin):
     empty_value_display = '--empty--'
 
 
-admin.site.unregister(User)
+class IsLikedAdmin(admin.ModelAdmin):
+
+    list_display = (
+        'id',
+        'user',
+        'post'
+    )
+    search_fields = (
+        'user__username',
+        'post__brief'
+    )
+    list_filter = ('user__username',)
+    empty_value_display = '--empty--'
+
+
 admin.site.register(User, UserAdmin)
 admin.site.register(Posts, PostsAdmin)
+admin.site.register(IsLiked, IsLikedAdmin)

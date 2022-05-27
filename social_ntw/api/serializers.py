@@ -6,11 +6,18 @@ from posts.models import IsLiked, Posts
 User = get_user_model()
 
 
-# class UserSerializer(serializers.ModelSerializer):
+class UserSerializer(serializers.ModelSerializer):
 
-#    class Meta:
-#        model = User
-#        fields = ('id', 'first_name', 'last_name', 'username', 'email')
+    class Meta:
+        model = User
+        extra_kwargs = {'password': {'write_only': True}}
+        fields = (
+            'id', 'first_name', 'last_name', 'username',
+            'email', 'location', 'company', 'password'
+        )
+
+    def create(self, validated_data):
+        return User.objects.create_user(**validated_data)
 
 
 class PostsSerializerShort(serializers.ModelSerializer):
