@@ -16,3 +16,4 @@ djoser==2.1.0
 drf-yasg==1.20.0
 isort==5.10.1
 flake8==4.0.1
+clearbit==0.1.7

@@ -1,7 +1,27 @@
-from django.contrib.auth import get_user_model
+from django.contrib.auth.models import AbstractUser
 from django.db import models
 
-User = get_user_model()
+
+class User(AbstractUser):
+
+    email = models.EmailField(unique=True)
+    company = models.CharField(
+        'Компания',
+        help_text='Компания',
+        max_length=100,
+        blank=True
+    )
+    location = models.CharField(
+        'Местоположение',
+        help_text='Местоположение',
+        max_length=100,
+        blank=True
+    )
+
+    class Meta:
+        ordering = ['id']
+        verbose_name = 'Пользователь'
+        verbose_name_plural = '  Пользователи'
 
 
 class Posts(models.Model):
@@ -39,7 +59,7 @@ class Posts(models.Model):
     class Meta:
         ordering = ['-pub_date']
         verbose_name = 'Пост'
-        verbose_name_plural = 'Посты'
+        verbose_name_plural = ' Посты'
 
     def __str__(self):
         return self.slug
